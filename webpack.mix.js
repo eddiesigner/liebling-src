@@ -29,7 +29,7 @@ mix.js('js/helpers.js', 'js/')
   .js('js/page.js', 'js/')
   .extract()
   .setResourceRoot('/assets')
-  .setPublicPath('../assets')
+  .setPublicPath('./theme/assets')
   .sass('sass/app.scss', 'css/')
   .sass('sass/home.scss', 'css/')
   .sass('sass/listing.scss', 'css/')
@@ -40,14 +40,14 @@ mix.js('js/helpers.js', 'js/')
   .options({
     processCssUrls: false
   })
-  .copy('sass/fonts/icomoon/*.*', '../assets/fonts/icomoon/')
-  .copyDirectory('sass/fonts/source-sans-pro/', '../assets/fonts/source-sans-pro/')
-  .copy('js/vendor/content-api.min.js', '../assets/js/vendor/')
+  .copy('sass/fonts/icomoon/*.*', './theme/assets/fonts/icomoon/')
+  .copyDirectory('sass/fonts/source-sans-pro/', './theme/assets/fonts/source-sans-pro/')
+  .copy('js/vendor/content-api.min.js', './theme/assets/js/vendor/')
   .browserSync({
     proxy: "localhost:2368",
     files: [
       'js/**/*.js',
       'sass/**/*.scss',
-      '../**/*.hbs'
+      './theme/**/*.hbs'
     ]
   });

@@ -5,7 +5,7 @@ services:
     image: ghost:4.3.3
     container_name: ghost
     volumes:
-      - ./..:/var/lib/ghost/content/themes/liebling:Z
+      - ./theme:/var/lib/ghost/content/themes/liebling:Z
       - ./ghost.db:/var/lib/ghost/content/data/ghost.db:Z
     environment:
       - NODE_ENV=development

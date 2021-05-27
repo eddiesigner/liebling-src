@@ -2,7 +2,7 @@
 
 const fs = require("fs");
 const path = require("path");
-const locales = "../locales";
+const locales = "./theme/locales";
 
 fs.readdir(locales, function(err, files) {
   if (err) return console.error(err);
